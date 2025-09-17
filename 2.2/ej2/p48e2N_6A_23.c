@@ -5,26 +5,18 @@ Fecha: 17-9-25
 No. Versión: 1
 Descripción: Ecuaciones lineales
 programa en Lenguaje C */
+#include <math.h>  // Incluye cabecera en el archivo
 #include <stdio.h> // Incluye cabecera en el archivo
 
-int main(int argc, char *argv[]) {
-  int a, b, c, d, e, f;    // declaracion de variables locales enteros
-  printf("Ingrese A: \n"); // Imprime pedir dato
-  scanf("%d", &a);         // Almacena dato en memoria
-  printf("Ingrese B: \n"); // Imprime pedir dato
-  scanf("%d", &b);         // Almacena dato en memoria
-  printf("Ingrese C: \n"); // Imprime pedir dato
-  scanf("%d", &c);         // Almacena dato en memoria
-  printf("Ingrese D: \n"); // Imprime pedir dato
-  scanf("%d", &d);         // Almacena dato en memoria
-  printf("Ingrese E: \n"); // Imprime pedir dato
-  scanf("%d", &e);         // Almacena dato en memoria
-  printf("Ingrese F: \n"); // Imprime pedir dato
-  scanf("%d", &f);         // Almacena dato en memoria
+#define PI 3.1416;
 
-  float x = (c * e - b * f) / (a * e - b * d);
-  printf("X es: %.2f\n", x); // Imprime calculo final
-  float y = (a * f - c * d) / (a * e - b * d);
-  printf("Y es: %.2f\n", y); // Imprime calculo final
+int main(int argc, char *argv[]) {
+  int l1, l2, l3, r, h;
+  float a, v;
+  printf("Ingrese l1: \n");
+  scanf("%d", &l1);
+  a = 6 * pow(l1, 2);
+  printf("Area de cubo = %.2f \n", a);
+
   return 0;
 }
