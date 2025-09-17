@@ -18,7 +18,7 @@
           src = ./.;
           buildInputs = [ pkgs.gcc ];
           buildPhase = ''
-            gcc p48e4N_6A_23.c -o p48e4N_6A_23
+            gcc -Wno-unused-result p48e4N_6A_23.c -o p48e4N_6A_23 -lm
           '';
           installPhase = ''
             mkdir -p $out/bin
