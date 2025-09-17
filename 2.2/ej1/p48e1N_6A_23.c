@@ -1,9 +1,9 @@
-/*Nombre del Programa: Plantilla base_V1
-Elaboró: MLMA
-No Lista: NL
-Fecha: Hoy
+/*Nombre del Programa: p48e1N_6A_nl.c
+Elaboró: Rojas Badillo Emilio
+No Lista: 23
+Fecha: 17-9-25
 No. Versión: 1
-Descripción:Muestra la Plantilla base de un
+Descripción: Ecuacion movimiento uniformemente acelerado
 programa en Lenguaje C */
 #include <math.h>  // Incluye cabecera en el archivo
 #include <stdio.h> // Incluye cabecera en el archivo
