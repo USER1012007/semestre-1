@@ -5,7 +5,7 @@ Fecha: 17-9-25
 No. Versión: 1
 Descripción: Ecuaciones lineales
 programa en Lenguaje C */
-#include <math.h> // Incluye archivo de cabecera
+#include <stdio.h> // Incluye cabecera en el archivo
 
 int main(int argc, char *argv[]) {
   int a, b, c, d, e, f;    // declaracion de variables locales enteros
@@ -23,7 +23,8 @@ int main(int argc, char *argv[]) {
   scanf("%d", &f);         // Almacena dato en memoria
 
   float x = (c * e - b * f) / (a * e - b * d);
-  printf("X es: %.2f\n",
-         df); // Imprime calculo final
+  printf("X es: %.2f\n", x); // Imprime calculo final
+  float y = (a * f - c * d) / (a * e - b * d);
+  printf("Y es: %.2f\n", y); // Imprime calculo final
   return 0;
 }
