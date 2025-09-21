@@ -12,17 +12,17 @@
     in {
       packages = forEachSystem ({ pkgs }: {
         default = pkgs.stdenv.mkDerivation {
-          pname = "p48e2N_6A_23";
+          pname = "p49e15N_6A_23";
           version = "1.0";
 
           src = ./.;
           buildInputs = [ pkgs.gcc ];
           buildPhase = ''
-            gcc p48e2N_6A_23.c -o p48e2N_6A_23
+            gcc -Wno-unused-result p49e15N_6A_23.c -o p49e15N_6A_23 -lm
           '';
           installPhase = ''
             mkdir -p $out/bin
-            cp p48e2N_6A_23 $out/bin/
+            cp p49e15N_6A_23 $out/bin/
           '';
         };
       });
@@ -30,7 +30,7 @@
       apps = forEachSystem ({ pkgs }: {
         default = {
           type = "app";
-          program = "${self.packages.${pkgs.system}.default}/bin/p48e2N_6A_23";
+          program = "${self.packages.${pkgs.system}.default}/bin/p49e15N_6A_23";
         };
       });
     };
