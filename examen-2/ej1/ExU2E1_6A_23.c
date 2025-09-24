@@ -14,11 +14,11 @@ int main(int argc, char *argv[]) {
   d6 = (costo - valor) / 6;
 
   printf("Depreciacion, valor real\n");
-  printf("%.2f, %.2f\n", d1, (costo - d1));
-  printf("%.2f, %.2f\n", d2, (costo - d2));
-  printf("%.2f, %.2f\n", d3, (costo - d3));
-  printf("%.2f, %.2f\n", d4, (costo - d4));
-  printf("%.2f, %.2f\n", d5, (costo - d5));
-  printf("%.2f, %.2f\n", d6, (costo - d6));
+  printf("%.2f, %.2f\n", (costo - d1), d1);
+  printf("%.2f, %.2f\n", (costo - d2), d2);
+  printf("%.2f, %.2f\n", (costo - d3), d3);
+  printf("%.2f, %.2f\n", (costo - d4), d4);
+  printf("%.2f, %.2f\n", (costo - d5), d5);
+  printf("%.2f, %.2f\n", (costo - d6), d6);
   return 0;
 }
