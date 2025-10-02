@@ -20,13 +20,13 @@ int main(int argc, char *argv[]) {
     scanf("%f", &base);
     printf("Ingrese altura:\n");
     scanf("%f", &altura);
-    printf("\033[2J\033[H");
+
     printf("Area triangulo: %.2f\n", (base * altura) / 2);
   } else if (opcion == 2) {
     printf("Area de circulo\n");
     printf("Ingrese radio:\n");
     scanf("%f", &radio);
-    printf("\033[2J\033[H");
+
     printf("Area circulo: %.2f\n", (PI * radio));
   } else if (opcion == 3) {
     printf("Area de cuadrado\n");
@@ -34,10 +34,10 @@ int main(int argc, char *argv[]) {
     scanf("%f", &base);
     printf("Ingrese altura:\n");
     scanf("%f", &altura);
-    printf("\033[2J\033[H");
+
     printf("Area cuadrado: %.2f\n", (base * altura));
   } else {
-    printf("\033[2J\033[H");
+
     printf("Ingrese una opcion correcta\n");
   }
 
