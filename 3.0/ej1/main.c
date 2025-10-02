@@ -22,7 +22,7 @@ int main(int argc, char *argv[]) {
       scanf("%f", &base);
       printf("Ingrese altura:\n");
       scanf("%f", &altura);
-      printf("\033[2J\033[H");
+      // printf("\033[2J\033[H");
       printf("Area triangulo: %.2f\n", (base * altura) / 2);
       break;
     case 2:
@@ -30,7 +30,7 @@ int main(int argc, char *argv[]) {
       printf("Area de circulo\n");
       printf("Ingrese radio:\n");
       scanf("%f", &radio);
-      printf("\033[2J\033[H");
+      // printf("\033[2J\033[H");
       printf("Area circulo: %.2f\n", (PI * radio));
       break;
     case 3:
@@ -39,11 +39,11 @@ int main(int argc, char *argv[]) {
       scanf("%f", &base);
       printf("Ingrese altura:\n");
       scanf("%f", &altura);
-      printf("\033[2J\033[H");
+      // printf("\033[2J\033[H");
       printf("Area cuadrado: %.2f\n", (base * altura));
       break;
     default:
-      printf("\033[2J\033[H");
+      // printf("\033[2J\033[H");
       printf("Ingrese una opcion correcta\n");
       break;
     }
