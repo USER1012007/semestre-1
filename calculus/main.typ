@@ -42,7 +42,7 @@
 #set enum(numbering: "a)")
 
 #align(center + horizon)[
-  #heading(outlined: false)[3.1 Resumen de Estructuras Selectivas] \
+  #heading(outlined: false)[1.1 La fórmula general] \
   Emilio Rojas Badillo \
   Instituto Tecnológico de Querétaro \
   Cálculo diferencial \
