@@ -11,22 +11,22 @@
   number-align: right + bottom,
   header: align(center)[
     #grid(
-      columns: (20%, 60%, 20%),
+      columns: (100%),
       align(left)[
-        #image("logo_tec.png", width: auto)
-      ],
-      align(center)[
-        #par(leading: .3cm)[
-          #text(size: 18pt)[Tecnológico Nacional de México] \
-          Instituto Tecnológico de Querétaro \
-          Cálculo diferencial
-        ]
-      ],
-      align(right)[
-        #image("logo_itq.png")
+        Tarea 1.1 \
+        La formula general
       ],
     )
   ],
+  footer: align(center)[
+    #grid(
+      columns: (100%),
+      align(left)[
+        \#31 - 6A \
+        Rojas Badillo Emilio
+      ],
+    )
+  ]
 )
 #set text(
 )
@@ -41,30 +41,8 @@
 
 #set enum(numbering: "a)")
 
-#align(center + horizon)[
-  #heading(outlined: false)[1.1 La fórmula general] \
-  Emilio Rojas Badillo \
-  Instituto Tecnológico de Querétaro \
-  Cálculo diferencial \
-  Francisco Javier Aviles Urbiola \
-  #datetime.today().display() \
-]
-
-#pagebreak()
-#outline()
-#pagebreak()
 
 #set heading(numbering: "1.")
-
-= Instrucciones
-Investiguen cómo es posible deducir la fórmula general de la ecuación cuadrática, $x = frac(-b #sym.plus.minus root(2, b^2 - 4a dot c) , 2 dot a)$ utilizando dos métodos distintos.
-#enum[El método tradicional de completar el trinomio cuadrado perfecto (TCP).][El método de Poh-Shen Loh, basado en la simetría y el promedio de las raíces.]
-
-= Objetivos 
-#enum[Comprender los posibles orígenes de la fórmula general que resuelve las ecuaciones polinómicas cuadráticas de una variable.][Practicar la escritura de expresiones matemáticas en Microsoft Word, utilizando los comandos de la referencia de símbolos y
-comandos publicada en el apartado Materiales del curso de Classroom.]
-
-#pagebreak()
 
 = Método de Completar el Trinomio Cuadrado Perfecto
 Partimos de la forma general de la ecuación cuadrática:
