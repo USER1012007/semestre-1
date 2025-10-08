@@ -2,59 +2,57 @@
 #include <stdio.h>
 
 int main() {
+  int i, opcion;
+  float signo, suma, termino;
 
-  int opcion, elementos, contador, total = 0, i = 0;
-  do {
-    printf("Ingrese opcion\n");
-    printf("1) serie 1/2\n2) serie pi\n3)serie 1 / n [pares]\n4)salir\n");
-    scanf("%d", &opcion);
-    // printf("Ingrese cantidad de elementos\n");
-    // scanf("%d", &elementos);
+  printf("Elige una serie:\n");
+  printf("1. Serie a: 1/1 + 1/2 + 1/3 + ...\n");
+  printf("2. Serie b: Pi = 4 - 4/3 + 4/5 - 4/7 + ...\n");
+  printf("3. Serie c: 1 - 1/2 + 1/4 - 1/6 + ...\n");
+  printf("Opcion: \n");
+  scanf("%i", &opcion);
 
-    // if (opcion < 0 || elementos < 0 || opcion == 4) {
-    //   return 0;
-    // }
-    if (opcion < 0) {
-      return 0;
-    }
+  suma = 0;
+  i = 1;
+  signo = 1;
 
-    switch (opcion) {
-    case 1:
-      while (total >= .01) {
-        i++;
-        printf("%s1/%d", (i > 1 ? " + " : " "), i);
-        total = 1 / i;
-      }
-      printf("\n");
-      break;
-    case 2:
-      contador = 3;
-      printf("PI = 4");
-      for (int i = 1; i <= elementos; i++) {
-        printf("%s4/%d", (i % 2 == 1 ? " + " : " - "), contador);
-        contador += 2;
-      }
-      printf("\n");
-      break;
-    case 3:
-      contador = 2;
-      printf("1");
-      for (int i = 1; i <= elementos; i++) {
-        printf("%s1/%d", (i % 2 == 1 ? " + " : " - "), contador);
-        contador += 2;
-      }
-      printf("\n");
-      break;
-    case 4:
-      return 0;
-      break;
-    default:
-      printf("Ingrese opcion correcta\n");
-      break;
-    }
-  } while (opcion != 4);
+  switch (opcion) {
+  case 1:
+    do {
+      termino = 1.0 / i;
+      suma += termino;
+      i += 1;
+    } while (fabs(termino) >= 0.01);
+    printf("Serie 1/n: %f\n", suma);
+    printf("cantidad: %d\n", i - 1);
+    break;
 
-  // printf("\033[2J\033[H\n");
+  case 2:
+    do {
+      termino = 4.0 / (2 * i - 1);
+      suma += signo * termino;
+      signo = -signo;
+      i += 1;
+    } while (fabs(termino) >= .01);
+    printf("Serie 4 - 4/n: %f\n", suma);
+    printf("cantidad: %d\n", i - 1);
+    break;
+
+  case 3:
+    do {
+      termino = signo / ((i == 1 ? 1 : 2) * (i == 1 ? i : i - 1));
+      suma += termino;
+      signo = -signo;
+      i += 1;
+    } while (fabs(termino) >= .01);
+    printf("Serie 1 - 1/n: %f\n", suma);
+    printf("cantidad: %d\n", i - 1);
+    break;
+
+  default:
+    printf("Ingrese otra opcion :0\n");
+    break;
+  }
 
   return 0;
 }
