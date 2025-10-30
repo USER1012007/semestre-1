@@ -4,18 +4,25 @@
 int main() {
   int op, n;
 
-  printf("1) serie de fibonacci\n2) ecuaciones\ningresse tu opcion: ");
+  printf("1) serie de fibonacci\n2) ecuaciones\ningrese tu opcion:\n");
   scanf("%d", &op);
 
   switch (op) {
   case 1:
-    int tmp = 1;
+    int tmp1 = 1;
+    int tmp2 = 1;
     printf("Ingrese cantidad de elementos:\n");
     scanf("%d", &n);
-    for (int i = 0; i <= n; i++) {
-      printf("%d, ", tmp);
-      tmp = tmp * -1 * (i + 1) / (i + 2);
+    if (n <= 0) {
+      break;
     }
+    for (int i = 0; i < n; i++) {
+      printf("%d, ", tmp2);
+      int suma = tmp2 + tmp1;
+      tmp2 = tmp1;
+      tmp1 = suma;
+    }
+    printf("\n");
     break;
 
   case 2:
