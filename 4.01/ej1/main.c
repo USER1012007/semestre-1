@@ -1,0 +1,51 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+#define MAX 30
+
+int days(int month, int year);
+
+int main() {
+  int students, units, sum = 0;
+  int qualifications[4][MAX];
+  float prom[MAX];
+
+  printf("ingrese cantidad de estudiantes[max. 30]: \n");
+  scanf("%d", &students);
+
+  if (students > 30 || students < 0) {
+    return 0;
+  }
+
+  for (int i = 0; i < students; i++) {
+    prom[i] = 0;
+    printf("estudiante: %d\n", i + 1);
+    for (int j = 0; j < 4; j++) {
+      printf("parcial: %d\n", j + 1);
+      printf("ingrese nota del estudiante %d [1-10]: \n", i + 1);
+      scanf("%d", &qualifications[i][j]);
+      sum += qualifications[i][j];
+    }
+    prom[i] = sum / 4;
+    printf("prom: %.2f\n", prom[i]);
+    sum = 0;
+  }
+
+  printf("tabla de resultados\n");
+  printf("estudiantes\tcalificaciones\n");
+  for (int i = 0; i < students; i++) {
+    printf("%d \t\t", i + 1);
+    for (int j = 0; j < 4; j++) {
+      printf("%d = %d, ", j + 1, qualifications[i][j]);
+    }
+    printf("\n");
+  }
+
+  printf("promedios de los estudiantes: \n");
+  for (int i = 0; i < students; i++) {
+    printf("estudiante %d: %.2f\n", i + 1, prom[i]);
+  }
+
+  return 0;
+}
