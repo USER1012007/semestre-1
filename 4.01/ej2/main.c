@@ -8,7 +8,7 @@ int days(int month, int year);
 
 int main() {
   int students, units, sum = 0;
-  int qualifications[4][MAX];
+  float qualifications[4][MAX][5];
   float prom[MAX];
 
   printf("ingrese cantidad de estudiantes[max. 30]: \n");
@@ -23,9 +23,12 @@ int main() {
     printf("estudiante: %d\n", i + 1);
     for (int j = 0; j < 4; j++) {
       printf("parcial: %d\n", j + 1);
-      printf("ingrese nota del estudiante %d [1-10]: \n", i + 1);
-      scanf("%d", &qualifications[i][j]);
-      sum += qualifications[i][j];
+      for (int k = 0; k < 5; k++) {
+        printf("estudiante %d [1-10] ; parcial %d ; materia %d: \n", i + 1,
+               j + 1, k + 1);
+        scanf("%f", &qualifications[i][j][k]);
+        sum += qualifications[i][j][k];
+      }
     }
     prom[i] = sum / 4;
     printf("prom: %.2f\n", prom[i]);
@@ -37,9 +40,11 @@ int main() {
   for (int i = 0; i < students; i++) {
     printf("%d \t\t", i + 1);
     for (int j = 0; j < 4; j++) {
-      printf("%d = %d, ", j + 1, qualifications[i][j]);
+      for (int k = 0; k < 5; k++) {
+        printf("%.2f, ", qualifications[i][j][k]);
+      }
+      printf("\n");
     }
-    printf("\n");
   }
 
   printf("promedios de los estudiantes: \n");
